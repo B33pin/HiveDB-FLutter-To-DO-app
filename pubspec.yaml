@@ -1,0 +1,30 @@
+name: hivetodo
+description: A new Flutter application.
+
+publish_to:
+version: 1.0.0+1
+
+environment:
+  sdk: ">=2.7.0 <3.0.0"
+
+dependencies:
+  flutter:
+    sdk: flutter
+
+  cupertino_icons: ^0.1.3
+  hive: ^1.4.1+1
+  hive_flutter: ^0.3.0+2
+
+dependency_overrides:
+  dartx: ^0.4.2
+
+
+dev_dependencies:
+  hive_generator: ^0.7.0+2
+  build_runner: ^1.10.0
+  flutter_test:
+    sdk: flutter
+
+flutter:
+
+  uses-material-design: true
