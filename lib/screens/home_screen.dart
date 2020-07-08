@@ -5,9 +5,22 @@ import 'package:hive_flutter/hive_flutter.dart';
 import 'package:hivetodo/models/task_model.dart';
 import 'bottom_sheet.dart';
 
-class HomeScreen extends StatelessWidget {
+class HomeScreen extends StatefulWidget {
+  @override
+  _HomeScreenState createState() => _HomeScreenState();
+}
+
+class _HomeScreenState extends State<HomeScreen> {
+  @override
+  void dispose() {
+    Hive.box('notes').compact();
+    Hive.close();
+    super.dispose();
+  }
   final contactsBox = Hive.box('notes');
+
   bool check;
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
